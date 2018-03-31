@@ -11,9 +11,9 @@ class Window(Tk):
 
     def create(self):
         #creating gaming field
-        self.reset_btt = Button(self,text="RESET", command=self.reset)
+        self.reset_btt = Button(self,text="RESET", command=self.reset, width=15,height=3)
         self.player_label = Label(self,text="It`s your turn, "+self.player,height="2",font="San-Serif, 20")
-        self.score_label = Label(self,text="Score:\nX: {}\n0: {}".format(str(self.score["X"]),str(self.score["0"])))
+        self.score_label = Label(self,font="San-Serif, 18",text="Score:\nX: {}\n0: {}".format(str(self.score["X"]),str(self.score["0"])))
         self.score_label.grid(row=1,column=1)
         self.player_label.grid(row=1,column=2)
         self.A1 = Butt(self,"A1")
