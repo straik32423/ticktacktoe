@@ -65,7 +65,8 @@ class Window(Tk):
             elif self.A3.value==self.B2.value==self.C1.value==dominator: self.winner(dominator)
 
     def is_winner(self):
-        f = ["A","B","C"]
+        #This func scans three rows, three columns and two roods to find a winner
+        f = ["A","B","C"] # A,B,C are the names of rows
         for i in f:
             dominator = eval("self."+i+"1.value")
             if not dominator: continue
